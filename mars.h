@@ -8,6 +8,8 @@
 #include <time.h>
 #include <stdlib.h>
 
+#define gaussian(mean, sd) ((mean) + (sd) * nextGaussian())
+
 //From http://ubuntuforums.org/showthread.php?t=1717717
 double nextDouble(double min, double max) {
 	double range = (max - min);
@@ -36,11 +38,14 @@ double nextGaussian() {
 	}
 }
 
+#if 0
 void main() {
 	srand((unsigned)time(NULL));
 	//Generate a bunch of randoms
 	//Use gnuplot to visually verify that they're actually gaussian distributed
 	for(int i = 0; i < 100000; i++) {
-		printf("%f\n", nextGaussian());
+		printf("%f\n", gaussian(0, 1));
+		//printf("%f\n", nextGaussian());
 	}
 }
+#endif
