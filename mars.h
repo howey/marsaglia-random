@@ -2,11 +2,7 @@
 //Follows Oracle's Java implementation of nextGaussian
 //http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Random.html#nextGaussian
 
-#include <stdio.h>
-#include <math.h>
-#include <stdbool.h>
 #include <time.h>
-#include <stdlib.h>
 
 #define gaussian(mean, sd) ((mean) + (sd) * nextGaussian())
 
